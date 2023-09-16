@@ -6,3 +6,8 @@
 Khi chạy câu lệnh trên sẽ fetch git repo về để build.
 
 ### Cách config
+
+Đổi tên `empty.db` thành `db`.
+Đổi tên `empty.problems` thành `problems`.
+
+Sửa các config trong `site.env`, `db.env`, `site`, `compose.yml`.

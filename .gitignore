@@ -1,6 +1,4 @@
 db.env
 site.env
-db/*
-!db/.gitkeep
-problems/*
-!problems/.gitkeep
+/db/
+/problems/
