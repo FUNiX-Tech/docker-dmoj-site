@@ -1,0 +1,44 @@
+version: '3'
+services:
+  db:
+    image: mariadb:latest
+    container_name: dmoj-mariadb
+    volumes:
+      - ./db:/var/lib/mysql
+    env_file:
+      - ./db.env
+    # command: "--default-storage-engine=aria --innodb=OFF"
+    networks:
+      - dmojnetwork
+
+  site:
+    # build: 
+    #   context: site
+    #   dockerfile: ./Dockerfile
+    image: dmoj-site:latest
+    container_name: dmoj-site
+    depends_on:
+      - db
+    volumes:
+      - /projects/foj/site/uploads:/projects/dmoj/site/uploads
+      - /projects/foj/problems:/projects/dmoj/problems
+    env_file:
+      - ./db.env
+      - ./site.env
+    ports: 
+      - 80:80
+      - 443:443
+      - 9999:9999
+      # - 9998:9998
+      - 15100:15100
+      - 15101:15101
+      - 15102:15102
+    logging:
+      driver: none
+
+    networks:
+      - dmojnetwork
+
+networks:
+  dmojnetwork:
+

@@ -6,4 +6,3 @@
 Khi chạy câu lệnh trên sẽ fetch git repo về để build.
 
 ### Cách config
-# docker-dmoj-site
