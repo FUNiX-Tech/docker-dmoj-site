@@ -7,7 +7,6 @@ Khi chạy câu lệnh trên sẽ fetch git repo về để build.
 
 ### Cách config
 
-Đổi tên `empty.db` thành `db`.
-Đổi tên `empty.problems` thành `problems`.
+Tạo folder `problems` và `db` cho volume ở thư mục gốc.
 
 Sửa các config trong `site.env`, `db.env`, `site`, `compose.yml`.
