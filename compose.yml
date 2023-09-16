@@ -12,10 +12,10 @@ services:
       - dmojnetwork
 
   site:
-    # build: 
-    #   context: site
-    #   dockerfile: ./Dockerfile
-    image: dmoj-site:latest
+    build: 
+      context: site
+      dockerfile: ./Dockerfile
+    # image: dmoj-site:latest
     container_name: dmoj-site
     depends_on:
       - db
