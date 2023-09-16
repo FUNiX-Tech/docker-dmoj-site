@@ -20,8 +20,8 @@ services:
     depends_on:
       - db
     volumes:
-      - /projects/foj/site/uploads:/projects/dmoj/site/uploads
-      - /projects/foj/problems:/projects/dmoj/problems
+      - ./uploads:/projects/dmoj/site/uploads
+      - ./problems:/projects/dmoj/problems
     env_file:
       - ./db.env
       - ./site.env
